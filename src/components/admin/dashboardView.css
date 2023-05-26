@@ -1,0 +1,88 @@
+.dashboard_view {
+    position: fixed;
+    top: -12%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dahboard_container {
+    max-width: 930px;
+    width: 100%;
+    height: auto;
+    border-radius: 0.4rem;
+    box-shadow: 0 1px 10px #999;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    border: 1px solid black;
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.dahboard_title {
+    padding: 1rem;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+}
+
+.dahboard_content {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.dash_table {
+    position: relative;
+    width: 900px;
+    line-height: 35px;
+    border: 1px solid white;
+}
+
+.dash_body tr td {
+    border-top: 1px solid white;
+}
+
+.dash_body tr td:nth-child(3) {
+    text-transform: capitalize;
+}
+
+.dahboard_close {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    top: 0.2rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+/* Media Quries */
+
+@media (max-width:576px) {
+    .dahboard_container {
+        position: relative;
+        left: 130%;
+        width: 1000px;
+        height: fit-content;
+        font-size: 13px;
+    }
+
+    .dahboard_close {
+        position: absolute;
+        top: 0.51rem;
+        font-size: 22px;
+    }
+
+    .dash_table {
+        white-space: nowrap;
+    }
+}

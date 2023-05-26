@@ -1,0 +1,92 @@
+.my-task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 3%;
+    left: 0%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.task-table {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    box-shadow: -2px 8px 10px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.task-head .task-head-tr th {
+    height: 50px;
+    border-bottom: 2px solid grey;
+}
+
+.task-body {
+    height: 100px;
+}
+
+.task-body tr td {
+    height: 50px;
+}
+
+.no_task {
+    position: relative;
+    left: 90%;
+}
+
+.task-body tr td:nth-child(3) {
+    text-transform: capitalize;
+}
+
+.view-button {
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #456;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    width: 90px;
+    border-radius: 20px;
+}
+
+.done {
+    color: rgb(3, 255, 3);
+}
+
+.wrong {
+    color: red;
+}
+
+/* Media Quries */
+@media (max-width: 576px) {
+    .my-task {
+        left: 120%;
+        font-size: 12px;
+    }
+
+    .manage-subadmin {
+        font-size: 20px;
+    }
+
+    .task-title {
+        position: relative;
+        top: 3%;
+        left: -7%;
+        font-size: 20px;
+    }
+
+    .task-body {
+        white-space: nowrap;
+    }
+
+    .no_task {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,169 @@
+.ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 10%;
+  left: 25%;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 8px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border: 1px solid black;
+  background-image: url("../images/form_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
+  color: white;
+}
+
+.ticket h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.ticket-error {
+  color: red;
+}
+
+.full-form {
+  position: relative;
+  top: 10%;
+  margin-top: 1%;
+  left: 0;
+}
+
+.form-title,
+.form-dep,
+.form-priority,
+.form-problem,
+.form-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.ticket-label,
+.dep-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.create-select,
+.user-ticket-btn {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.create-dep {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.create-text {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  height: 100px;
+  resize: none;
+}
+
+.user-ticket-btn {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.user-ticket-btn:disabled {
+  cursor: not-allowed;
+}
+
+.user-ticket-btn:hover {
+  background-color: #0062cc;
+}
+
+/* Media Quries */
+@media (max-width: 576px) {
+  .ticket {
+    width: 300px;
+    position: relative;
+    left: -10%;
+  }
+
+  .full-form {
+    position: relative;
+    left: 90%;
+  }
+
+  .form-dep {
+    position: relative;
+    left: 20%;
+  }
+
+  .ticket-label {
+    position: relative;
+    left: -130%;
+    font-size: 13px;
+  }
+
+  .dep-label {
+    position: relative;
+    left: -150%;
+    font-size: 13px;
+  }
+
+  .ticket h3 {
+    font-size: 20px;
+  }
+
+  .create-select,
+  .create-text {
+    position: relative;
+    left: -115%;
+    width: 200px;
+    resize: none;
+    font-size: 13px;
+  }
+
+  .create-dep {
+    position: relative;
+    left: -135%;
+    width: 200px;
+    font-size: 13px;
+  }
+
+  .user-ticket-btn {
+    position: relative;
+    left: -90%;
+    width: 90px;
+    font-size: 15px;
+    height: 35px;
+  }
+}

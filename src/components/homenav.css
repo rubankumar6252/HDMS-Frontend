@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
+body {
+    background-color: rgba(255, 255, 255, 0.49);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    left: 0;
+    width: 100%;
+    height: 53px;
+    background: #eaeaea;
+    margin-bottom: 0;
+}
+
+.navbar_head {
+    left: 0;
+    position: absolute;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    list-style: none;
+}
+
+.navbar_head .desk_logo {
+    width: 70px;
+    position: absolute;
+    top: -123%;
+}
+
+.navbar_head .desk_logo:hover {
+    opacity: 0.7;
+    scale: 1.03;
+}
+
+.navbar .container .rvs_logo {
+    width: 50px;
+    position: absolute;
+    top: -10%;
+    left: 33%;
+}
+
+.navbar_nav {
+    list-style: none;
+}
+
+.navbar .navbar_nav .adminlogin .nav_item .nav_link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgb(32, 33, 36);
+    border-radius: 30px;
+    left: 1080px;
+    color: white;
+    padding-left: 15px;
+    background-color: rgb(32, 33, 36);
+    width: 150px;
+    height: 36px;
+    white-space: nowrap;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.navbar .navbar_nav .adminlogin .nav_item .nav_link .admin_name {
+    position: relative;
+    left: -9px;
+}
+
+.adminlogin .nav_item {
+    position: absolute;
+    left: 8%;
+    top: 18%;
+}
+
+.navbar .navbar_nav .userlogin .nav_item .nav_link {
+    display: inline-flex;
+    position: absolute;
+    top: 8px;
+    right: 2%;
+    align-items: center;
+    background-color: rgb(32, 33, 36);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    height: 36px;
+    padding: 0px 24px;
+    text-decoration: none;
+    width: 140px;
+    white-space: nowrap;
+}
+
+.navbar .navbar_nav .userlogin .nav_item .nav_link .log {
+    position: relative;
+    left: -5px;
+}
+
+.navbar .navbar_nav .userlogin .nav_item .nav_link .userlogin_name {
+    position: relative;
+    left: -15px;
+}
+
+.navbar .navbar_nav .userlogin .nav_item .nav_link:hover,
+.navbar .navbar_nav .adminlogin .nav_item .nav_link:hover {
+    box-shadow: 0.5px 0.5px 3.5px rgb(32, 33, 36);
+}
+
+.nav_rvs .rvs_title {
+    top: -35%;
+    position: absolute;
+    left: 37%;
+    text-transform: capitalize;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #7c0201;
+}
+
+.desk_title {
+    text-align: center;
+    margin: 18% 0;
+    text-transform: capitalize;
+    font-family: 'Kanit', sans-serif;
+    font-size: 70px;
+    font-weight: 100;
+    color: black;
+}
+
+
+/* Media Quires */
+
+@media (max-width: 576px) {
+    .home {
+        width: 100%;
+    }
+
+    .navbar_head .desk_logo {
+        width: 50px;
+        position: absolute;
+        top: -80%;
+        left: 0;
+    }
+
+    .nav_rvs .rvs_title {
+        visibility: hidden;
+    }
+
+    .navbar .container .rvs_logo {
+        visibility: hidden;
+    }
+
+    .home h1 {
+        font-size: 40px;
+        position: absolute;
+        margin-top: 50%;
+        margin-left: -30%;
+    }
+
+    .navbar .navbar_nav .adminlogin .nav_item .nav_link {
+        left: 90%;
+        width: 110px;
+        height: 30px;
+    }
+
+    .adminlogin .nav_item {
+        font-size: 10px;
+    }
+
+    .navbar .navbar_nav .userlogin .nav_item .nav_link {
+        right: 5%;
+        width: 110px;
+        height: 30px;
+    }
+
+    .userlogin .nav_item {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+}

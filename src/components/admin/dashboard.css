@@ -1,0 +1,206 @@
+.admin-dashboard .chart {
+    width: 800px;
+    position: absolute;
+    top: 55%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #ccc;
+    box-shadow: 10px 8px 17px 5px #5445;
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.admin-dashboard .all-tickets {
+    position: relative;
+    left: 1.5%;
+    top: 10%;
+    width: 190px;
+    height: 120px;
+    padding: 5px 0 0 25px;
+    border: 2px solid #ccc;
+    box-shadow: 10px 8px 17px 1px #5445;
+    cursor: pointer;
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.admin-dashboard .all-tickets .allticket-count {
+    position: relative;
+    top: -10%;
+    left: 5%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.admin-dashboard .close-ticket {
+    position: absolute;
+    left: 17%;
+    top: 8.6%;
+    width: 190px;
+    height: 120px;
+    padding: 5px 0 0 25px;
+    border: 2px solid #ccc;
+    box-shadow: 10px 8px 17px 1px #5445;
+    cursor: pointer;
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.admin-dashboard .close-ticket .closeticket-count {
+    position: relative;
+    top: -10%;
+    left: 5%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.admin-dashboard .pending-ticket {
+    position: absolute;
+    left: 32.5%;
+    top: 8.6%;
+    width: 190px;
+    height: 120px;
+    padding: 5px 0 0 25px;
+    border: 2px solid #ccc;
+    box-shadow: 10px 8px 17px 1px #5445;
+    cursor: pointer;
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.admin-dashboard .pending-ticket .pending-ticket-count {
+    position: relative;
+    top: -10%;
+    left: 5%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.admin-dashboard .resolve-ticket {
+    position: absolute;
+    left: 48%;
+    top: 8.6%;
+    width: 190px;
+    height: 120px;
+    padding: 5px 0 0 25px;
+    border: 2px solid #ccc;
+    box-shadow: 10px 8px 17px 1px #5445;
+    cursor: pointer;
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.admin-dashboard .resolve-ticket .resolve-ticket-count {
+    position: relative;
+    top: -10%;
+    left: 5%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.admin-dashboard .progress-bar {
+    width: 400px;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+}
+
+/* Media Quries */
+@media (max-width: 576px) {
+    .admin-dashboard{
+        width: 100%;
+    }
+    .admin-dashboard .chart {
+        position: absolute;
+        left: 55%;
+        top: 60%;
+        width: 300px;
+    }
+
+    .dashboard-title {
+        position: absolute;
+        top: -2%;
+        left: -12%;
+        font-size: 20px;
+    }
+
+    .admin-dashboard .all-tickets {
+        position: absolute;
+        margin-top: -10%;
+        left: -10%;
+        width: 150px;
+        height: 100px;
+    }
+
+    .admin-dashboard .all-tickets h3 {
+        font-size: 17px;
+    }
+
+    .admin-dashboard .all-tickets .allticket-count {
+        font-size: 20px;
+    }
+
+    .admin-dashboard .close-ticket {
+        width: 150px;
+        top: 6.3%;
+        left: 60%;
+        height: 100px;
+    }
+
+    .admin-dashboard .close-ticket h3 {
+        position: relative;
+        left: -10%;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .admin-dashboard .close-ticket .closeticket-count {
+        font-size: 20px;
+    }
+
+    .admin-dashboard .pending-ticket {
+        position: absolute;
+        margin-top: 44%;
+        left: -10%;
+        width: 150px;
+        height: 100px;
+    }
+
+    .admin-dashboard .pending-ticket h3 {
+        position: relative;
+        left: -10%;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .admin-dashboard .pending-ticket .pending-ticket-count {
+        font-size: 20px;
+    }
+
+    .admin-dashboard .resolve-ticket {
+        width: 150px;
+        position: absolute;
+        margin-top: 43.8%;
+        left: 60%;
+        height: 100px;
+    }
+
+    .admin-dashboard .resolve-ticket h3 {
+        font-size: 17px;
+        position: relative;
+        left: -5%;
+    }
+
+    .admin-dashboard .resolve-ticket .resolve-ticket-count {
+        font-size: 20px;
+    }
+}

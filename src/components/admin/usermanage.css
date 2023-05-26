@@ -1,0 +1,247 @@
+:root {
+    --rad: .7rem;
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: linear-gradient(rgb(13, 23, 203), rgb(135, 23, 204));
+    --font-fam: 'Lato', sans-serif;
+    --height: 5rem;
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+.user_manage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -1%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.user_table {
+    position: absolute;
+    top: 100%;
+    width: 80%;
+    text-align: center;
+    box-shadow: -2px 8px 10px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border: 1px solid #292626;
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.found {
+    position: relative;
+    left: 120%;
+}
+
+.user_head tr th {
+    padding: 10px 20px;
+    border-bottom: 1px solid white;
+}
+
+.user_body tr td {
+    padding: 10px;
+}
+
+.user_body tr td:nth-child(3) {
+    text-transform: capitalize;
+}
+
+.user_body tr td .del:last-child {
+    cursor: pointer;
+}
+
+.user_body tr td .del:hover {
+    color: red;
+    background: #cecaca;
+    border-radius: 25px;
+    padding: 1px;
+}
+
+.delete-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: -15%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-content {
+    background: linear-gradient(rgb(124, 25, 45), rgba(222, 125, 35, 0.949));
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.modal-message {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btn-cancel {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    border: 2px solid gray;
+}
+
+.btn-cancel:hover {
+    background-color: grey;
+    color: white;
+}
+
+.btn-delete {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #f44336;
+}
+
+.btn-delete:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.search_form {
+    position: relative;
+    width: 30rem;
+    left: 10%;
+    border-radius: var(--rad);
+}
+
+.search,
+.search_btn {
+    font-family: var(--font-fam);
+    border: 0;
+    padding-left: 20px;
+    color: var(--color-dark);
+    font-size: 1rem;
+}
+
+.search[type="search"] {
+    outline: 0;
+    width: 40%;
+    height: 36px;
+    background: var(--color-light);
+    padding: 10 1.6rem;
+    border-radius: var(--rad);
+    appearance: none;
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+    border: 1px solid black;
+}
+
+.search_btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 47%;
+    width: 4rem;
+    height: 36px;
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+    color: white;
+}
+
+.search:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - 17rem);
+    font-size: 18px;
+}
+
+.search:not(:placeholder-shown)+.search_btn {
+    display: block;
+}
+
+
+/* Media Quries */
+
+@media (max-width:576px) {
+    .all_users {
+        font-size: 20px;
+    }
+
+    .search_form {
+        position: absolute;
+        left: 10%;
+    }
+
+    .user_table {
+        position: absolute;
+        left: -3%;
+        font-size: 12px;
+        top: 140%;
+    }
+
+    .search[type="search"] {
+        width: 30%;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .search_btn {
+        right: 62%;
+        width: 2.5rem;
+        height: 30px;
+    }
+
+    .search_btn span {
+        position: relative;
+        right: 79%;
+    }
+
+    .found {
+        font-size: 13px;
+    }
+
+    .del {
+        font-size: 20px;
+    }
+    .delete-modal{
+        position: absolute;
+        left: 120%;
+        top: 500%;
+    }
+
+    .modal-content {
+        background-image: url("../images/form_image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .modal-message {
+        font-size: 13px;
+    }
+
+    .btn-cancel {
+        font-size: 10px;
+    }
+    .btn-delete{
+        font-size: 10px;   
+    }
+}
