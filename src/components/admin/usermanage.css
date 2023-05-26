@@ -77,7 +77,9 @@
 }
 
 .modal-content {
-    background: linear-gradient(rgb(124, 25, 45), rgba(222, 125, 35, 0.949));
+    background-image: url("../images/form_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px;
     border-radius: 5px;
     display: flex;
