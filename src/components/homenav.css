@@ -51,7 +51,7 @@ body {
     list-style: none;
 }
 
-.navbar .navbar_nav .adminlogin .nav_item .nav_link {
+.navbar .navbar_nav .adminlogin .nav_item .login_link {
     display: inline-flex;
     align-items: center;
     position: relative;
@@ -68,9 +68,9 @@ body {
     text-decoration: none;
 }
 
-.navbar .navbar_nav .adminlogin .nav_item .nav_link .admin_name {
+.navbar .navbar_nav .adminlogin .nav_item .login_link .admin_name {
     position: relative;
-    left: -9px;
+    left: 4px;
 }
 
 .adminlogin .nav_item {
@@ -79,7 +79,7 @@ body {
     top: 18%;
 }
 
-.navbar .navbar_nav .userlogin .nav_item .nav_link {
+.navbar .navbar_nav .userlogin .nav_item .login_link {
     display: inline-flex;
     position: absolute;
     top: 8px;
@@ -96,18 +96,18 @@ body {
     white-space: nowrap;
 }
 
-.navbar .navbar_nav .userlogin .nav_item .nav_link .log {
+.navbar .navbar_nav .userlogin .nav_item .login_link .log {
     position: relative;
     left: -5px;
 }
 
-.navbar .navbar_nav .userlogin .nav_item .nav_link .userlogin_name {
+.navbar .navbar_nav .userlogin .nav_item .login_link .userlogin_name {
     position: relative;
-    left: -15px;
+    left: 1px;
 }
 
-.navbar .navbar_nav .userlogin .nav_item .nav_link:hover,
-.navbar .navbar_nav .adminlogin .nav_item .nav_link:hover {
+.navbar .navbar_nav .userlogin .nav_item .login_link:hover,
+.navbar .navbar_nav .adminlogin .nav_item .login_link:hover {
     box-shadow: 0.5px 0.5px 3.5px rgb(32, 33, 36);
 }
 
@@ -136,7 +136,7 @@ body {
 
 /* Media Quires */
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     .home {
         width: 100%;
     }
@@ -144,7 +144,7 @@ body {
     .navbar {
         flex-direction: column;
         align-items: center;
-        z-index: 9999;
+        z-index: 1;
     }
 
     .menu-container {
@@ -153,7 +153,7 @@ body {
         left: -250px;
         background: black;
         width: 250px;
-        height: 100%;
+        height: 640px;
         transition: left 0.3s ease-in-out;
     }
 
@@ -162,7 +162,7 @@ body {
     }
 
     .menu {
-        position: relative;
+        position: absolute;
         top: 25%;
         left: 5%;
         display: block;
@@ -173,7 +173,7 @@ body {
     }
 
     .navbar_nav {
-        display: none;
+        flex-direction: column;
     }
 
     .navbar.menu-open .navbar_nav {
@@ -205,7 +205,7 @@ body {
         margin-left: -30%;
     }
 
-    .navbar .navbar_nav .adminlogin .nav_item .nav_link {
+    .navbar .navbar_nav .adminlogin .nav_item .login_link {
         position: absolute;
         top: 50%;
         left: 90%;
@@ -222,7 +222,7 @@ body {
         padding-left: 20px;
     }
 
-    .navbar .navbar_nav .userlogin .nav_item .nav_link {
+    .navbar .navbar_nav .userlogin .nav_item .login_link {
         top: 30%;
         left: 8%;
         width: 210px;
