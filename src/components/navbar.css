@@ -194,7 +194,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     .nav {
         height: 100%;
     }
