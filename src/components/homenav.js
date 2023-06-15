@@ -17,8 +17,8 @@ export default function HomeNav() {
                     <ul className='navbar_nav'>
                         <div className='adminlogin'>
                             <li className='nav_item'>
-                                <Link to="/adminlogin" className='nav_link' onClick={() => setMenu(false)}>
-                                    <span className="material-symbols-outlined">
+                                <Link to="/adminlogin" className='login_link' onClick={() => setMenu(false)}>
+                                    <span className="material-symbols-outlined login_logo">
                                         login
                                     </span>
                                     <span className='admin_name'>Admin Login</span>
@@ -27,7 +27,7 @@ export default function HomeNav() {
                         </div>
                         <div className='userlogin'>
                             <li className='nav_item'>
-                                <Link to="/userlogin" className='nav_link' onClick={() => setMenu(false)}>
+                                <Link to="/userlogin" className='login_link' onClick={() => setMenu(false)}>
                                     <span className="material-symbols-outlined log">
                                         login
                                     </span>
@@ -53,3 +53,4 @@ export default function HomeNav() {
         </>
     )
 }
+
