@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
+import { useState } from "react";
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import Loading from "../loading";
 import '../login.css';
 
 function AdminLogin() {
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
 
     async function login(role) {
         let url;
@@ -16,11 +19,13 @@ function AdminLogin() {
         }
 
         try {
+            setIsLoading(true);
             const res = await axios.post(url, {
                 email: formik.values.email,
                 password: formik.values.password,
                 role: role
             });
+            setIsLoading(false);
             if (res.data === "Invalid Email id or Password") {
                 return toast.error("Invalid Email id or Password");
             }
@@ -30,6 +35,7 @@ function AdminLogin() {
             Authenticate(role, res.data.token);
         } catch (error) {
             console.log(error);
+            setIsLoading(false);
             return toast.error("An error occurred. Please try again later.");
         }
     }
@@ -70,32 +76,36 @@ function AdminLogin() {
 
     return (
         <>
-            <div className="wrapper login">
-                <div className="cont">
-                    <div className="col-right">
-                        <div className="login-form">
-                            <h2>Admin Login</h2>
-                            <form onSubmit={formik.handleSubmit}>
-                                <p className="admin">
-                                    <label>Role<span>*</span></label>
-                                    <select className="admin-role" id="role" value={formik.values.role} onChange={formik.handleChange}>
-                                        <option disabled value="">Select role</option>
-                                        <option value="admin">Admin</option>
-                                        <option value="subadmin">Sub-admin</option>
-                                    </select>
-                                </p>
-                                <p> <label>Email address<span>*</span></label> <input type="email" name="email" placeholder="example@gmail.com" onChange={formik.handleChange} value={formik.values.email} /> </p>
-                                {formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}
-                                <p> <label>Password<span>*</span></label> <input type="password" name="password" placeholder="Password" onChange={formik.handleChange} value={formik.values.password} /> </p>
-                                {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}
-                                <p> <input className="btn" type="submit" value="Login" /> </p>
-                            </form>
+            {isLoading ? (
+                <Loading />
+            ) : (
+                <div className="wrapper login">
+                    <div className="cont">
+                        <div className="col-right">
+                            <div className="login-form">
+                                <h2>Admin Login</h2>
+                                <form onSubmit={formik.handleSubmit}>
+                                    <p className="admin">
+                                        <label>Role<span>*</span></label>
+                                        <select className="admin-role" id="role" value={formik.values.role} onChange={formik.handleChange}>
+                                            <option disabled value="">Select role</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="subadmin">Sub-admin</option>
+                                        </select>
+                                    </p>
+                                    <p> <label>Email address<span>*</span></label> <input type="email" name="email" placeholder="example@gmail.com" onChange={formik.handleChange} value={formik.values.email} /> </p>
+                                    {formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}
+                                    <p> <label>Password<span>*</span></label> <input type="password" name="password" placeholder="Password" onChange={formik.handleChange} value={formik.values.password} /> </p>
+                                    {formik.errors.password ? <div className="error">{formik.errors.password}</div> : null}
+                                    <p> <input className="btn" type="submit" value="Login" /> </p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            )}
         </>
-    )
+    );
 }
 
 export default AdminLogin;
